@@ -82,19 +82,90 @@
 
 //  Big o notation can be simplified greatly just O(n) O(n^2) O(1)
 
-function logAtleast(n) {
-  for (let i = 1; i <= Math.max(5, n); i++) {
-    console.log(i);
-  }
-}
-// Because n will be what determines how long this function will take to run the O(n) is the big O notation used
-logAtleast(10);
+// function logAtleast(n) {
+//   for (let i = 1; i <= Math.max(5, n); i++) {
+//     console.log(i);
+//   }
+// }
+// // Because n will be what determines how long this function will take to run the O(n) is the big O notation used
+// logAtleast(10);
 
-// This function below is O(1) because the value is constant due to the highest the number can be is set by the min so it will never be higher than 5
-function logAtMost(n) {
-  for (let i = 1; i <= Math.min(5, n); i++) {
-    console.log(i);
-  }
-}
-// Wont log more than 5 so O(1)
-logAtMost(19);
+// // This function below is O(1) because the value is constant due to the highest the number can be is set by the min so it will never be higher than 5
+// function logAtMost(n) {
+//   for (let i = 1; i <= Math.min(5, n); i++) {
+//     console.log(i);
+//   }
+// }
+// // Wont log more than 5 so O(1)
+// logAtMost(19);
+
+// function logUpTo(n) {
+//   for (let i = 1; i <= n; i++) {
+//     console.log(i);
+//   }
+// } // O(n)
+// logUpTo(10);
+
+// function logAtMost10(n) {
+//   for (let i = 1; i <= Math.min(n, 10); i++) {
+//     console.log(i);
+//   }
+// } // O(1) Stays constant
+
+// logAtMost10(11);
+
+// function logAtLeast10(n) {
+//   for (let i = 1; i <= Math.max(n, 10); i++) {
+//     console.log(i);
+//   } // O(n)
+// }
+
+// logAtLeast10(2);
+
+// function onlyElementsAtEvenIndex(array) {
+//   let newArray = Array(Math.ceil(array.length / 2));
+//   for (let i = 0; i < array.length; i++) {
+//     if (i % 2 == 0) {
+//       newArray[i / 2] = array[i];
+//     }
+//   } // O(n)
+//   return newArray;
+// }
+
+// function subtotals(array) {
+//   let subtotalArray = Array(array.length);
+//   for (let i = 0; i < array.length; i++) {
+//     let subtotal = 0;
+//     for (let j = 0; j <= i; j++) {
+//       subtotal += array[j];
+//     }
+//     subtotalArray[i] = subtotal;
+//   }
+//   return subtotalArray;
+// }
+
+/***
+ *
+ * SPACE COMPLEXITY
+ */
+
+// Primitives(booleans, numbers. undefined and null) are constant space
+
+// Strings require O(n) space (where n is the string length)
+
+// Reference types are generally O(n) where n is the length(for arrays) or the number of keys for objects
+
+// function sum(arr) {
+//   let total = 0;
+//   for (let i = 0; o < arr.length; i++) {
+//     total += arr[i];
+//   }
+//   return total;
+// }
+
+/***
+ * Logarithms
+ * are the inverse of exponentiation
+ */
+
+// log2(8)=3
